@@ -30,4 +30,14 @@ Example:
 	
 	e) YYYYMMDD
 	
-5. How to build and execute.
+	Examples : 
+	
+	/
+	
+	
+	
+5. One can use sample build file(retention_build.xml, attached in this repository) to build jar file from the source code. 
+
+6. config.properties and log4j.xml are the associated file required for this application execution. 
+
+7. Sample execution command has been attached (retention_execution_sample_cmd.txt) in this repository. One can refer to this sample command for running this application.
