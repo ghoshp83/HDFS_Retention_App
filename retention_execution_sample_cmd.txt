@@ -1,0 +1,18 @@
+java -cp .:./*:
+/run/cloudera-scm-agent/process/11493-yarn-NODEMANAGER:
+/opt/cloudera/parcels/CDH-5.7.1-1.cdh5.7.1.p0.11/lib/hadoop/lib/*:
+/opt/cloudera/parcels/CDH-5.7.1-1.cdh5.7.1.p0.11/lib/hadoop/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/./:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-yarn/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-yarn/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/.//*:
+/usr/share/cmf/lib/plugins/event-publish-5.7.1-shaded.jar:
+/usr/share/cmf/lib/plugins/tt-instrumentation-5.7.1.jar:
+/opt/cloudera/parcels/CDH/lib/hbase/conf:
+/usr/java/jdk1.7.0_79/lib/tools.jar:
+/opt/cloudera/parcels/CDH/lib/hbase:
+/opt/cloudera/parcels/CDH/lib/hbase/lib/*.jar -Djava.library.path=/usr/lib:/usr/lib64 -Xmx3276m  
+com.ericsson.ark.apps.offlineRetention.OfflineRetention config.properties
