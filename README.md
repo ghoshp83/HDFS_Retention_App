@@ -32,12 +32,15 @@ Example:
 	
 	Examples : 
 	
-	/
-	
+	/testdata/pralay/date=20171130
+	/testdata/pralaySample/timestamp=1511977202
+	/test/pralay/transaction_1511977202326_1511976081373.txt
+	/home/pralay/testdata/user_info_20171201.parquet
+	/user/pralay/pralay_data/20170920
 	
 	
 5. One can use sample build file(retention_build.xml, attached in this repository) to build jar file from the source code. 
 
-6. config.properties and log4j.xml are the associated file required for this application execution. 
+6. config.properties and log4j.xml are the associated files required for this application execution. 
 
 7. Sample execution command has been attached (retention_execution_sample_cmd.txt) in this repository. One can refer to this sample command for running this application.
