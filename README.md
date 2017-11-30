@@ -6,11 +6,15 @@ This application is used for housekeeping purpose of HDFS data.
 4. Retention periods and paths of the ‘data to be deleted’ are configurable using config.properties: 
 
 	<app_name>_DIR=<app_location>
+	
 	<app_name>_DIR_ZNODE=<path_of_zookeeper>
+	
 	<app_name>_DIR_RETENTION_DAYS=<number_of_days_to_retain_in_HDFS>
 	
 Example:
 	TestData1_DIR=/test/pralay/userData
+	
 	TestData1_DIR_ZNODE=/pralay/userData
+	
 	TestData1_DIR_RETENTION_DAYS=10
 
