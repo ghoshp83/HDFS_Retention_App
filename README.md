@@ -17,10 +17,12 @@ Example:
 	TestData1_DIR_ZNODE=/pralay/userData
 	TestData1_DIR_RETENTION_DAYS=10
 
-5. Currently this application supports removal of a folder containing "date" and "timestamp" values present in their name. Any name which has below types - 
+5. Currently this application supports removal of a folder containing "date" and "timestamp" values present in their name. Any name which has below types :
+
 	a) date=YYYYMMDD
 	b) timestamp={10 digit or 13 digit}
 	c) _YYYYMMDD
 	d) _{10 digit or 13 digit timestamp}
 	e) YYYYMMDD
 	
+6. How to build and execute.
