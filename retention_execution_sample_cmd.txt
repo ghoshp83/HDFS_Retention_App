@@ -1,0 +1,18 @@
+java -cp .:./*:
+/run/cloudera-scm-agent/process/10349-yarn-NODEMANAGER:
+/opt/cloudera/parcels/CDH/lib/hadoop/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/./:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-hdfs/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-yarn/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-yarn/.//*:
+/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/lib/*:
+/opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/.//*:
+/usr/share/cmf/lib/plugins/event-publish-5.x.x-shaded.jar:
+/usr/share/cmf/lib/plugins/tt-instrumentation-5.x.x.jar:
+/opt/cloudera/parcels/CDH/lib/hbase/conf:
+/usr/java/jdk1.7.0_xx/lib/tools.jar:
+/opt/cloudera/parcels/CDH/lib/hbase:
+/opt/cloudera/parcels/CDH/lib/hbase/lib/*.jar -Djava.library.path=/usr/lib:/usr/lib64 -Xmx3276m  
+com.pralay.apps.offlineRetention.OfflineRetention config.properties
