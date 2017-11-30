@@ -33,9 +33,13 @@ Example:
 	Examples : 
 	
 	/testdata/pralay/date=20171130
+	
 	/testdata/pralaySample/timestamp=1511977202
+	
 	/test/pralay/transaction_1511977202326_1511976081373.txt
+	
 	/home/pralay/testdata/user_info_20171201.parquet
+	
 	/user/pralay/pralay_data/20170920
 	
 	
