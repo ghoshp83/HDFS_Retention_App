@@ -15,4 +15,4 @@ java -cp .:./*:
 /usr/java/jdk1.7.0_xx/lib/tools.jar:
 /opt/cloudera/parcels/CDH/lib/hbase:
 /opt/cloudera/parcels/CDH/lib/hbase/lib/*.jar -Djava.library.path=/usr/lib:/usr/lib64 -Xmx3276m  
-com.ericsson.ark.apps.offlineRetention.OfflineRetention config.properties
+com.pralay.apps.offlineRetention.OfflineRetention config.properties
