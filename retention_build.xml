@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project HDFSRetention with Jar-in-Jar Loader">
+    <!--ANT 1.7 is required-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="C:/Users/pralay/workspaceTest"/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/retention.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="com.pralay.apps.offlineRetention.OfflineRetention"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ slf4j-api-1.7.6.jar slf4j-log4j12-1.7.6.jar hadoop-common-2.6.0-cdh5.7.1.jar zookeeper-3.4.5-cdh5.7.1.jar commons-logging-1.2.jar log4j-1.2.17.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.workspace}/HDFSRetention/bin"/>
+            <zipfileset dir="${dir.jarfile}/TelecomCloudAnalytics-Branch-1/Dependencies" includes="slf4j-api-1.7.6.jar"/>
+            <zipfileset dir="${dir.jarfile}/TelecomCloudAnalytics-Branch-1/Dependencies" includes="slf4j-log4j12-1.7.6.jar"/>
+            <zipfileset dir="${dir.jarfile}/Dependencies" includes="hadoop-common-2.6.0-cdh5.7.1.jar"/>
+            <zipfileset dir="${dir.jarfile}/Dependencies" includes="zookeeper-3.4.5-cdh5.7.1.jar"/>
+            <zipfileset dir="${dir.jarfile}/Dependencies" includes="commons-logging-1.2.jar"/>
+            <zipfileset dir="${dir.jarfile}/Dependencies" includes="log4j-1.2.17.jar"/>
+        </jar>
+    </target>
+</project>
