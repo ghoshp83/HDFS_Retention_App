@@ -140,7 +140,7 @@ public class MonitorRetentionPeriod implements Watcher {
                     }
 
                     if (folder_name.matches("[0-9]+")) {
-                        if (folder_name.length() == 10 || folder_name.length() == 13) {
+                        if (folder_name.length() == 10 || folder_name.length() == 13 || folder_name.length() == 17) {
 
                             String path = null;
                             boolean isExpired = isExpired(folder_name, new Date(), retentionPeriodInDays, "unix");
