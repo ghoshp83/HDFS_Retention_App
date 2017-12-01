@@ -22,13 +22,17 @@ Example:
 
 	a) date=YYYYMMDD
 	
-	b) timestamp={10 digit or 13 digit}
+	b) _YYYYMMDD
 	
-	c) _YYYYMMDD
+	c) YYYYMMDD
 	
-	d) _{10 digit or 13 digit timestamp}
+	d) timestamp={10 digit or 13 digit}
 	
-	e) YYYYMMDD
+	e) _{10 digit or 13 digit timestamp}
+	
+	f) yyyyMMddHHmmssSSS
+	
+	g) _yyyyMMddHHmmssSSS
 	
 	Examples : 
 	
