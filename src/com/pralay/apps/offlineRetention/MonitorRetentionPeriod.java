@@ -138,9 +138,11 @@ public class MonitorRetentionPeriod implements Watcher {
                         if(folder_name.contains("."))
                            folder_name = folder_name.substring(0,folder_name.lastIndexOf("."));
                     }
+                    
+                    System.out.println("length: "+folder_name.length());
 
                     if (folder_name.matches("[0-9]+")) {
-                        if (folder_name.length() == 10 || folder_name.length() == 13 || folder_name.length() == 17) {
+                        if (folder_name.length() == 10 || folder_name.length() == 13) {
 
                             String path = null;
                             boolean isExpired = isExpired(folder_name, new Date(), retentionPeriodInDays, "unix");
@@ -190,6 +192,28 @@ public class MonitorRetentionPeriod implements Watcher {
                                 ExpiredFilesList.add(path);
                             }
 
+                        }else if (folder_name.length() == 17) {
+                            boolean isExpired = isExpired(folder_name, new Date(), retentionPeriodInDays, "yyyyMMddHHmmssSSS");
+                            if (isExpired) {
+                                String path = null;
+                                if (!(znode_dir == null)) {
+                                    if (variable_String_flg) {
+                                        path = folderName.toString() + post_timestamp_folder_path + ":" + znode_dir
+                                                + "/" + folder_name_1;
+                                    } else {
+                                        path = folderName.toString() + ":" + znode_dir + "/" + folder_name_1;
+                                    }
+
+                                } else {
+                                    if (variable_String_flg) {
+                                        path = folderName.toString() + post_timestamp_folder_path + ":NA";
+                                    } else {
+                                        path = folderName.toString() + ":NA";
+                                    }
+                                }
+                                ExpiredFilesList.add(path);
+                            }
+
                         }
                     }
                 //}
@@ -233,7 +257,7 @@ public class MonitorRetentionPeriod implements Watcher {
                 dirTimeMsec = dirTime.getTime();
 
             } catch (ParseException | IllegalArgumentException e) {
-                log.error("timestamp has the wrong format, must be yyyyMMdd: " + dirTimeStr
+                log.error("timestamp has the wrong format, must be "+pattern+": " + dirTimeStr
                         + ", this dir will not be deleted", e);
                 parseFailed = true;
             }
